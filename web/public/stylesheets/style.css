@@ -158,6 +158,12 @@ main#posts {
 
 main#entrada {
   padding: 2rem 0;
+  text-align: left;
+
+  div.inner {
+    text-align: center;
+
+  }
 
   img {
     width: 800px;
