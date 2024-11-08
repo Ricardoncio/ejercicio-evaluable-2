@@ -5,7 +5,41 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header>
+
+      <%- include('componentes/header') %>
+
+    </header>
+
+    <nav>
+
+      <%- include('componentes/nav') %>
+
+    </nav>
+
+    <main id="posts">
+
+      <h2>Últimas entradas del blog</h2>
+
+      <div class="container">
+
+        <% posts.forEach( post => { %>
+          <div class="post">
+            <a href="/entrada/<%= post.id %>"></a>
+            <img alt="Foto de post" src="<%= post.thumbnail %>">
+            <p><%= post.title %></p>
+          </div>
+        <% }) %>
+
+      </div>
+
+
+    </main>
+
+    <footer>
+
+      <p>Created by Ricardo Cruz Gómez</p>
+
+    </footer>
   </body>
 </html>

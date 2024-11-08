@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    
+    <header>
+
+        <%- include('componentes/header') %>
+  
+    </header>
+
+    <nav>
+
+        <%- include('componentes/nav') %>
+
+    </nav>
+
+    <main id="entrada">
+
+        <div class="container">
+
+            <img src="<%= post.image %>" alt="Foto de entrada">
+            <h2><%= post.title %></h2>
+            <p><%= post.intro %></p>
+            <a href="/"><%= post.category %></a>
+            <%- post.content %>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p>Created by Ricardo Cruz Gómez</p>
+
+    </footer>
+
+</body>
+</html>
